@@ -7,6 +7,7 @@ var pad = require('./utils.js').pad;
 
 program
 .version('0.0.1')
+.description('Possible types: \n\tdepartments\t\trequires year and semester\n\tcourses\t\t\trequires year, semester, and department\n\tcourse\t\t\trequires year, semester, department, and class number')
 .usage('<type> [options]')
 .option('-y, --year [language]', 'Year')
 .option('-s, --semester [semester]', 'Semester')
@@ -22,7 +23,6 @@ if(!program.args.length){
   if(keyword == "departments"){
     console.log(chalk.green(program.semester + " " + program.year));
     scrape.get_departments(program.year, program.semester).then(function(res){
-      console.log(res.departments.length);
       for(var i = 0; i < res.departments.length; ++i){
         var title = res.departments[i]._;
         var code = res.departments[i].$.id;
