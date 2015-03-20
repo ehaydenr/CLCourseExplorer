@@ -1,0 +1,20 @@
+{
+  "name": "CLCourseExplorer",
+  "version": "0.0.1",
+  "description": "A simple command-line tool for searching UIUC courses",
+  "author": "Eric Rosenberg",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "commander": "^2.7.1",
+    "promise": "^6.1.0",
+    "request": "^2.53.0",
+    "xml2js": "^0.4.5",
+    "xml2js-xpath": "^0.4.4"
+  },
+  "bin": {
+    "explore": "./coursesearch.js"
+  }
+}
